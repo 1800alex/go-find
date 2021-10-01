@@ -1,4 +1,4 @@
-module 1800alex/find
+module 1800alex/go-find
 
 go 1.17
 
