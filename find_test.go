@@ -15,7 +15,7 @@ func TestLoad(t *testing.T) {
 	g.Describe("Load", func() {
 		g.It("Should find files correctly", func() {
 
-			opts := FindOptions{}
+			opts := Options{}
 
 			opts.RegularFilesOnly = true
 			opts.SortByRecentModTime = true
@@ -25,7 +25,7 @@ func TestLoad(t *testing.T) {
 
 			// fmt.Println(res)
 
-			opts = FindOptions{}
+			opts = Options{}
 
 			opts.RegularFilesOnly = true
 			opts.SortByRecentModTime = true
@@ -36,7 +36,7 @@ func TestLoad(t *testing.T) {
 
 			// fmt.Println(res)
 
-			opts = FindOptions{}
+			opts = Options{}
 
 			opts.DirectoriesOnly = true
 			opts.Recursive = true
@@ -48,7 +48,7 @@ func TestLoad(t *testing.T) {
 
 			re, err := regexp.Compile(`^.+\.(txt)$`)
 			g.Assert(err).IsNil()
-			opts = FindOptions{}
+			opts = Options{}
 
 			opts.RegularFilesOnly = true
 			opts.MatchRegex = re
@@ -60,7 +60,7 @@ func TestLoad(t *testing.T) {
 
 			re, err = regexp.Compile(`^.+\.(bin)$`)
 			g.Assert(err).IsNil()
-			opts = FindOptions{}
+			opts = Options{}
 
 			opts.RegularFilesOnly = true
 			opts.MatchRegex = re
@@ -69,7 +69,7 @@ func TestLoad(t *testing.T) {
 
 			// fmt.Println(res)
 
-			opts = FindOptions{}
+			opts = Options{}
 
 			opts.RegularFilesOnly = true
 			opts.MatchExtension = ".txt"

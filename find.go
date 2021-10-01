@@ -10,7 +10,7 @@ import (
 	"sort"
 )
 
-type FindOptions struct {
+type Options struct {
 	Recursive bool
 
 	StopAtFirstMatch bool
@@ -38,7 +38,7 @@ type Found struct {
 	Info os.FileInfo
 }
 
-func Find(dir string, opts FindOptions) ([]Found, error) {
+func Find(dir string, opts Options) ([]Found, error) {
 	var result []Found
 
 	if opts.Recursive {
