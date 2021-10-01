@@ -1,4 +1,4 @@
-module 1800alex/go-find
+module github.com/1800alex/go-find
 
 go 1.17
 
